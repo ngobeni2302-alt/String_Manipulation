@@ -51,12 +51,16 @@ def sum_two_numbers(a: int, b: int) -> int:
 
 def get_value(d: dict, key: str):
     """Requirement: Return the value for the given key. If key is missing, return "Not Found"."""
-    pass
+    for k in d:
+        if k == key:
+            return d[k]
+    return "Not Found"
+
 
 def create_simple_dict(key: str, value: any) -> dict:
     """Requirement: Take a key and a value and return them as a single-item dictionary."""
     return {key : value}
-print(create_simple_dict("color", "red"))
+
 
 # --- 5. SEARCHING & FILTERING ---
 
